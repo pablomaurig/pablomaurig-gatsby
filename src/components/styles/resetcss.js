@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components'
 
 export default createGlobalStyle`
   html {
-    font-family: sans-serif;
+    font-family: 'Raleway', sans-serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
   }
@@ -201,7 +201,7 @@ export default createGlobalStyle`
   }
   body {
     color: hsla(0, 0%, 0%, 0.8);
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    font-family: Raleway, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
       Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     text-decoration: none;
     font-weight: normal;
@@ -247,10 +247,10 @@ export default createGlobalStyle`
     padding-right: 0;
     padding-top: 0;
     margin-bottom: 1.45rem;
-    color: inherit;
+    color: #334960;
     font-weight: bold;
     text-rendering: optimizeLegibility;
-    font-size: 1.62671rem;
+    font-size: 1.4rem;
     line-height: 1.1;
   }
   h3 {

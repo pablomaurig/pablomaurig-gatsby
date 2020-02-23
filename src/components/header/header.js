@@ -12,7 +12,7 @@ const HeaderWrapper = styled.header`
   display: block;
   width: 100%;
   z-index: 1000;
-  background-color: #25303B;
+  background-color: #334960;
 `
 
 const HeaderNav = styled.nav`
@@ -26,13 +26,12 @@ const HeaderNav = styled.nav`
   justify-content: space-between;
   overflow-x: auto;
   overflow-y: hidden;
-  background-color: #25303B;
 `
 
 const HeaderLinkGroup = styled.div`
   display: flex;
   flex-direction: row;
-` 
+`
 
 const HeaderLink = styled(Link)`
   position: relative;
@@ -47,9 +46,11 @@ const HeaderLink = styled(Link)`
   padding-right: 20px;
   min-width: 42px;
   z-index: 10;
+  font-family: 'Indie Flower';
+  font-size: 1.4rem;
 `
 const GithubLink = styled(({ className }) => (
-  <a 
+  <a
     className={className}
     href={`https://github.com/${siteConfig.githubUsername}`}
     target='_blank'
@@ -72,7 +73,7 @@ const GithubLink = styled(({ className }) => (
 `
 
 class Header extends React.Component {
-  render () {
+  render() {
     const { headerLinks } = siteConfig
 
     return (

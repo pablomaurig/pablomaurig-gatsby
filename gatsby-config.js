@@ -23,6 +23,14 @@ module.exports = {
         display: config.display,
         icon: config.icon,
       },
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Indie Flower`,
+          `Raleway\:400,700,800` // you can also specify font weights and styles
+        ],
+        display: 'swap'
+      },
     },
     `gatsby-plugin-styled-components`,
     {

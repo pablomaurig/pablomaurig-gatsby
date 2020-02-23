@@ -5,7 +5,7 @@ import SkillBar from './skill-bar'
 export default styled(({ className, title = 'Skills', skills = [] }) => {
   return (
     <div className={className}>
-      <h1>{title}</h1>
+      <h2>{title}</h2>
       {skills.map(skill => (
         <SkillBar key={skill.name} name={skill.name} level={skill.level} />
       ))}

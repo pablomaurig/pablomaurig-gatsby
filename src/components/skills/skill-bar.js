@@ -16,15 +16,22 @@ SkillBar.displaName = 'SkillBar'
 
 export default styled(SkillBar)`
   width: 100%;
+  border-radius:3px;
+  overflow: hidden;
+  margin-bottom: 1rem;
   .skill__bar {
     width: 100%;
-    height: 10px;
-    background-color: lightgrey;
+    height: 20px;
+    background-color: white;
+    box-shadow: inset 0 2px 3px rgba(0,0,0,.15);
     padding: 1px;
+    border-radius:3px;
   }
   .skill__level {
-    background-color: #25303B;
+    background-color: #428bca;
     width: ${p => p.level || 0}%;
-    height: 8px;
+    height: 18px;
+    border-radius: 3px 0 0 3px;
+    box-shadow: inset 0 -2px 8px rgba(0,0,0,.2);
   }
 `
