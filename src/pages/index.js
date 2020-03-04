@@ -12,6 +12,7 @@ import About from '../components/about'
 import Skills from '../components/skills'
 import Work from '../components/Work'
 import Contact from '../components/Contact'
+import Image from '../components/image'
 
 const Separator = styled.hr`
   margin-top: 20px;
@@ -35,7 +36,6 @@ class Home extends React.Component {
         />
 
         <Hero
-          heroImg={siteConfig.siteCover}
           title={title}
         />
 
@@ -43,10 +43,15 @@ class Home extends React.Component {
           <Container className="page-content" fluid>
             <Row>
               <Col xs={4} className='avatar' sm={3}>
-                <img
+                {/* <img
                   className='avatar__image'
-                  src='/images/avatar.png'
-                  alt='user avatar'
+                  src={data.image.childImageSharp.fluid.src}
+                  alt='Pablo Maurig'
+                /> */}
+                <Image
+                  className='avatar__image'
+                  imagen='avatar.png'
+                  alt="A corgi smiling happily"
                 />
                 <div className="social">
                   {siteConfig.social.github && <a className="social-link github" href={siteConfig.social.github}>
@@ -96,11 +101,14 @@ export default styled(Home)`
     flex-direction: column;
   }
 
-  .avatar__image {
-    box-shadow: 3px 3px 15px 0px rgba(0,0,0,0.75);
-    /* max-width: 200px; */
-    border-radius: 100px;
-    margin: 0 auto 20px;
+  .avatar__image{
+    overflow:unset!important;
+    img{
+      box-shadow: 3px 3px 15px 0px rgba(0,0,0,0.75);
+      /* max-width: 200px; */
+      border-radius: 100px;
+      margin: 0 auto 20px;
+    }
   }
 
   .social {

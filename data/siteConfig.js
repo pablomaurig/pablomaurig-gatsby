@@ -109,7 +109,7 @@ module.exports = {
   siteUrl: 'https://pablomaurig.github.io/site',
   pathPrefix: '/site', // Note: it must *not* have a trailing slash.
   siteCover: '/images/cover.jpg',
-  googleAnalyticsId: 'UA-000000000-1',
+  googleAnalyticsId: 'UA-75869137-1',
   background_color: '#ffffff',
   theme_color: '#25303B',
   display: 'minimal-ui',

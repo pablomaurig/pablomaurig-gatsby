@@ -1,17 +1,6 @@
 import React from 'react'
-import { withPrefix } from 'gatsby'
-import siteConfig from '../../../data/siteConfig'
+import { graphql, useStaticQuery } from 'gatsby'
 import styled from 'styled-components'
-
-const HeroContainer = styled.div`
-  position: relative;
-  display: table;
-  width: 100%;
-  overflow: hidden;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-`
 
 const TitleContainer = styled.div`
   display: table-cell;
@@ -28,26 +17,41 @@ const HeroTitle = styled.h1`
   text-shadow: 1px 1px 4px rgba(34, 34, 34, 0.6);
 `
 
-class Hero extends React.Component {
-  render() {
-    const { title, className } = this.props
+const Hero = ({ title }) => {
+  const data = useStaticQuery(graphql` 
+    query HeroImage{
+      image: file(relativePath: {eq: "cover.jpg"}) {
+        childImageSharp {
+          fixed {
+            ...GatsbyImageSharpFixed
+          }
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+  const HeroContainer = styled.div`
+    position: relative;
+    display: table;
+    width: 100%;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    ${p => `background-image: url(${data.image.childImageSharp.fluid.src});`}
+    height: 70vh;
+    background-attachment: fixed;
+  `
 
-    return (
-      <HeroContainer className={className}>
-        <TitleContainer>
-          <HeroTitle>{title}</HeroTitle>
-        </TitleContainer>
-      </HeroContainer>
-    )
-  }
+  return (
+    <HeroContainer className='hero-cont'>
+      <TitleContainer>
+        <HeroTitle>{title}</HeroTitle>
+      </TitleContainer>
+    </HeroContainer>
+  )
 }
 
-export default styled(Hero)`
-  
-  ${p => `background-image: url(${p.heroImg || withPrefix(siteConfig.siteCover)});`}
-  height: 70vh;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-`
+export default Hero
