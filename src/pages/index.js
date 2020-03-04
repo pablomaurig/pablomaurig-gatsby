@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Container, Row, Col } from 'react-awesome-styled-grid'
 import { FaGithub, FaLinkedin, FaEnvelope, FaTwitter } from "react-icons/fa"
 import siteConfig from '../../data/siteConfig'
-
+//components
 import Layout from '../components/layout'
 import Hero from '../components/hero'
 import SEO from '../components/SEO'
