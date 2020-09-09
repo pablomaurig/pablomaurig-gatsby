@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://www.gatsbyjs.org">
-    <img src="./gastby-logo.svg" alt="Gatsby logo" style="width:80px;height:auto;">
+    <img src="https://raw.githubusercontent.com/pablomaurig/site/master/gatsby-logo.svg" alt="Gatsby logo" style="width:80px;height:auto;">
   </a>
 </p>
 <h1 align="center">
