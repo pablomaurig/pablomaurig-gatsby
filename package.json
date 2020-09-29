@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-cv",
+  "name": "pablo-maurig-cv",
   "private": true,
-  "description": "A simple starter to get up and developing your digital curriculum with GatsbyJS",
+  "description": "Pablo Maurig's digital curriculum built with GatsbyJS",
   "version": "0.0.1",
-  "author": "Francisco Santos <yoshi.df@gmail.com>",
+  "author": "Pablo Maurig <pablomaurig@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "1.10.6",
     "gatsby": "^2.19.23",
@@ -44,9 +44,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/santosfrancisco/gatsby-starter-cv"
+    "url": "https://github.com/pablomaurig/site"
   },
   "bugs": {
-    "url": "https://github.com/santosfrancisco/gatsby-starter-cv/issues"
+    "url": "https://github.com/pablomaurig/site/issues"
   }
 }
